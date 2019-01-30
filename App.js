@@ -6,7 +6,7 @@ import Anime from "./components/anime.js"
 
 export default class App extends Component {
 
-  state = {name:"blake",alias:"balake",loggedIn:true,started:true,dead:false,enterText:"Press to Enter"}
+  state = {name:"",alias:"",loggedIn:false,started:false,dead:false,enterText:"Press to Enter"}
 
   login = () => {
     AlertIOS.prompt(
