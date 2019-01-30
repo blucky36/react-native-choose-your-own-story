@@ -5,7 +5,7 @@ export default class Anime extends Component {
   state = {fadeAnim: new Animated.Value(0)}
 
   componentDidMount() {
-    Animated.timing(this.state.fadeAnim,{toValue: 1,duration: 2000,}).start()
+    Animated.timing(this.state.fadeAnim,{toValue: 1,duration: 1000,}).start()
   }
 
   render() {

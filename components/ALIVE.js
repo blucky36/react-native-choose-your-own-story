@@ -5,6 +5,11 @@ import Death from "./DEATH.js"
 
 class Alive extends Component {
   state = {...this.props.state,ss:"Second Story?"}
+
+  handleContinue(){
+
+  }
+  
   nope(){
     this.setState({...this.state,ss:"Not Ready Yet Sorry"})
     let nopeinterval = setInterval(()=>{

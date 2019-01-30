@@ -3,6 +3,16 @@ import { Animated, Text, View, Image} from 'react-native'
 import Anime from "./anime.js"
 
 class Death extends Component {
+
+  handleDeath(){
+    //send death data to api
+  }
+
+  handleRestart(){
+    //render you back to user
+    console.log(this.props.state);
+  }
+
   render(){
     return (
       <Fragment>

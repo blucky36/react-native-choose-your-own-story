@@ -1,28 +1,14 @@
 import React, {Component} from 'react'
-// import {Platform, StyleSheet, Text, View} from 'react-native';
-import { Animated, Text, View, AlertIOS } from 'react-native';
+import { Animated, Text, View, TextInput } from 'react-native';
 import User from "./components/user.js"
 import Anime from "./components/anime.js"
 
 export default class App extends Component {
 
-  state = {name:"",alias:"",loggedIn:false,started:false,dead:false,enterText:"Press to Enter"}
+  state = {name:"name",alias:"alias",loggedIn:false,started:false,dead:false,enterText:"Press to Enter"}
 
   login = () => {
-    AlertIOS.prompt(
-      "Enter Your Alias",
-      null,
-      text => {
-        this.setState({...this.state,alias:text,loggedIn:true})
-      }
-    )
-    AlertIOS.prompt(
-      "Enter Your Name",
-      null,
-      text2 => {
-        this.setState({...this.state,name:text2})
-      }
-    )
+    this.setState({...this.state,loggedIn:true})
   }
 
   start = () => {
@@ -34,9 +20,13 @@ export default class App extends Component {
   render() {
     if(!this.state.loggedIn){
       return (
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-          <Anime style={{width: 250, height: 50, backgroundColor: 'red'}}>
-            <Text onPress = {()=>{this.login()}} style={{fontSize: 20, textAlign: 'center', margin: 10}}>{this.state.enterText}</Text>
+        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center',backgroundColor:"black"}}>
+          <Anime style={{width: 250, height: 150, backgroundColor: 'red'}}>
+            <Text style={{color:"white"}}>NAME</Text>
+            <TextInput style={{backgroundColor:"white"}} onChangeText={(name)=>{this.setState({...this.state,name})}}/>
+            <Text style={{color:"white"}}>ALIAS</Text>
+            <TextInput style={{backgroundColor:"white",marginTop:"4%"}} onChangeText={(alias)=>{this.setState({...this.state,alias})}}/>
+            <Text onPress = {()=>{this.login()}} style={{marginTop:"4%",marginLeft:25,width:200,height:30,fontSize: 20, textAlign: 'center',backgroundColor:"blue"}}>{this.state.enterText}</Text>
           </Anime>
         </View>
       )

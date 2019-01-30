@@ -9,25 +9,10 @@ class StoryStart extends Component{
 
   state={
     ...this.props.state,
-    output:"",
+    output:"And So It Begins",
     deathText1:`${this.props.state.alias} decides to stay on the couch`,
     left1:false,
     right1:false
-  }
-
-  textFun(){
-    let textVariable = "And So It Begins"
-    let output = ""
-    let arr = textVariable.split("")
-    let whatever = setInterval(()=>{
-      if(this.state.output.length >= textVariable.length){
-        clearInterval(whatever)
-        return
-      }else{
-        output += arr.shift()
-        this.setState({...this.state,output})
-      }
-    },50)
   }
 
   leftPath(){
@@ -47,7 +32,6 @@ class StoryStart extends Component{
   }
 
   render(){
-    this.textFun()
     if(this.state.right1){
       return <Food state = {this.state}/>
     }
@@ -63,12 +47,12 @@ class StoryStart extends Component{
           <Text style={{color:"white",fontSize:20}}>{this.state.output}</Text>
         </View>
         <View style={{width:"100%",flex: 2, alignItems: 'center', justifyContent: 'center', backgroundColor:"purple"}}>
-          <Anime>
+           <Anime>
             <Text style={{color:"white",fontSize:20}}>{this.state.alias} wakes up one morning on a couch in Galvanize.  "Oh man I slept through the night while studying late" {this.state.alias} thinks.  {this.state.alias}'s stomach growls with extreme hunger as they had forgotten to eat the entire day before.</Text>
           </Anime>
         </View>
         <View style={{width:"100%",flex: 2, alignItems: 'center', justifyContent: 'center', backgroundColor:"purple"}}>
-          <Anime>
+           <Anime>
             <Text onPress = {()=>{this.rightPath()}} style={{color:"white",fontSize:20}}>{this.state.alias} decides to go find food</Text>
             <Text onPress = {()=>{this.leftPath()}} style={{color:"white",fontSize:20}}>{this.state.alias} decides to continue outside</Text>
             <Text onPress = {()=>{this.death1()}} style={{color:"white",fontSize:20}}>{this.state.deathText1}</Text>
