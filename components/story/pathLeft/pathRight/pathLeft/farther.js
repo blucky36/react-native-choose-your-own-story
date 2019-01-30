@@ -32,16 +32,16 @@ class Farther extends Component {
     }
     return (
       <Fragment>
-        <View style={{width:"100%",flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:"purple"}}>
+        <View style={{width:"100%",flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:"darkGreen"}}>
           <Anime>
             <Text style={{color:"white",fontSize:20}}>{this.state.alias} decides to continue farther into the woods with the befriended bear.  After travelling for some time they run into the bears den farther up the mountain path.  {this.state.alias} realizes they are in the presence of five other bears of various sizes</Text>
           </Anime>
         </View>
-        <View style={{width:"100%",flex: 2, alignItems: 'center', justifyContent: 'center', backgroundColor:"purple"}}>
+        <View style={{width:"100%",flex: 2, alignItems: 'center', justifyContent: 'center', backgroundColor:"darkGreen"}}>
           <Anime>
             <Text onPress={()=>{this.deathLRL()}}style={{color:"white",fontSize:20,textAlign:"center"}}>{this.state.deathTextLRL}</Text>
-            <Text onPress={()=>{this.lrlr()}}style={{color:"white",fontSize:20,textAlign:"center"}}>try to befriend all the bears</Text>
-            <Text onPress={()=>{this.lrll()}}style={{color:"white",fontSize:20,textAlign:"center"}}>Roar to show dominance</Text>
+            <Text onPress={()=>{this.lrll()}}style={{color:"white",fontSize:20,textAlign:"center"}}>try to befriend all the bears</Text>
+            <Text onPress={()=>{this.lrlr()}}style={{color:"white",fontSize:20,textAlign:"center"}}>Roar to show dominance</Text>
           </Anime>
         </View>
       </Fragment>

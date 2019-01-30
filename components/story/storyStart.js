@@ -27,7 +27,7 @@ class StoryStart extends Component{
         output += arr.shift()
         this.setState({...this.state,output})
       }
-    },5)
+    },50)
   }
 
   leftPath(){
