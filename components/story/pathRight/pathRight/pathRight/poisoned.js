@@ -28,7 +28,7 @@ class Poisoned extends Component {
       return <Help state = {this.state}/>
     }
     if(this.state.rrrl){
-      return  <Evacuate state = {this.state}/>
+      return <Evacuate state = {this.state}/>
     }
     return (
       <Fragment>
