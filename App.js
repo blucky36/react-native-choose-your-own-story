@@ -5,7 +5,7 @@ import Anime from "./components/anime.js"
 
 export default class App extends Component {
 
-  state = {name:"name",alias:"alias",loggedIn:false,dead:false,enterText:"Press to Enter"}
+  state = {name:"name",alias:"alias",loggedIn:false,dead:false,enterText:"Press to Enter",deathArray:[]}
 
   login = () => {
     this.setState({...this.state,loggedIn:true})

@@ -4,11 +4,40 @@ import Anime from "./anime.js"
 import User from "./user.js"
 
 class Death extends Component {
-  state = {...this.props.state,user:false}
-
-  handleDeath(){
+  state = {...this.props.state,user:false,death:"oof"}
+  async handleDeath(){
     //send death data to api
+    let users = await fetch(`https://cyosdeath.herokuapp.com/players`).then(data=>data.json())
+    let specUser = users.filter(user=>this.state.alias === user.alias),oof
+    console.log(specUser);
+    if(specUser.length > 0){
+      oof = specUser[specUser.length-1]
+    }else{
+      oof = {
+        death_array:[],
+        alias:this.state.alias
+      }
+    }
+    console.log(oof);
+    let deathArray = oof.death_array
+    console.log(deathArray);
+    deathArray.push(this.state.death)
+    console.log(deathArray);
+    await fetch(`https://cyosdeath.herokuapp.com/players`,{
+      method:"post",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body:JSON.stringify({
+        alias: this.state.alias,
+        deaths: deathArray
+      })
+    })
+    this.setState({...this.state,deathArray})
   }
+
+  componentDidMount(){
+    this.handleDeath()
+  }
+
 
   handleRestart(){
     this.setState({...this.state,user:true,dead:false})
