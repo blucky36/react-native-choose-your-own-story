@@ -8,14 +8,14 @@ class Escape extends Component {
   deathRRLL(){
     this.setState({...this.state,deathTextRRLL:`Gets stuck in fence`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by barbed wire"})
       clearInterval(deathInterval)
     },1500)
   }
   death2RRLL(){
     this.setState({...this.state,deathText2RRLL:`hits head on rock after jumping fence`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by head trauma"})
       clearInterval(deathInterval)
     },1500)
   }

@@ -22,7 +22,7 @@ class User extends Component {
             <Text onPress = {()=>{this.start()}} style={{color:"white",}}>Click Here to start your adventure as {this.props.state.alias}</Text>
           </View>
           <View style={{height:"33%",width:"100%",flex: 3, alignItems: 'center', justifyContent: 'center', backgroundColor:"#0033cc"}}>
-            {this.state.deathArray.length > 0 ? this.state.deathArray.map(death=><Text>{death}</Text>) :<Text><Image style={{maxWidth:"98%",maxHeight:"98%",alignItems:"center"}}source={require("./images/sadcat2.jpg")}/></Text>}
+            {this.state.deathArray.length > 0 ? this.state.deathArray.map(death=><Text style={{color:"white"}}>{death}</Text>) :<Text><Image style={{maxWidth:"98%",maxHeight:"98%",alignItems:"center"}}source={require("./images/sadcat2.jpg")}/></Text>}
           </View>
         </Fragment>
       )

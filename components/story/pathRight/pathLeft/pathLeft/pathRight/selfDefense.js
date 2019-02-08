@@ -9,7 +9,7 @@ class SelfDefense extends Component {
   deathRLLR(){
     this.setState({...this.state,deathTextRLLR:`${this.state.alias} dies in british prison`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by spelling errors"})
       clearInterval(deathInterval)
     },1500)
   }

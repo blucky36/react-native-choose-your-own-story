@@ -10,7 +10,7 @@ class Conversion extends Component {
   deathRRL(){
     this.setState({...this.state,deathTextRRL:`${this.state.alias} is struck by lightning and dies instantly`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by lightning"})
       clearInterval(deathInterval)
     },1500)
   }

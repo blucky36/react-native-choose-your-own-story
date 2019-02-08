@@ -16,14 +16,14 @@ class Flatiron extends Component {
   deathLLR(){
     this.setState({...this.state,deathTextLLR:`upon unwrapping gift ${this.state.alias} melts into the ground as water and dies instantly`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by MELTING"})
       clearInterval(deathInterval)
     },1500)
   }
   death2LLR(){
     this.setState({...this.state,deathText2LLR:`upon unwrapping gift ${this.state.alias} bursts into flames and is incinerated`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by COMBUSTION"})
       clearInterval(deathInterval)
     },1500)
   }

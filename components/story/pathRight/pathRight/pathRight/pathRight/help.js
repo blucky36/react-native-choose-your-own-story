@@ -8,14 +8,14 @@ class Help extends Component {
   deathRRRR(){
     this.setState({...this.state,deathTextRRRR:`Nobody Was around`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by poison"})
       clearInterval(deathInterval)
     },1500)
   }
   death2RRRR(){
     this.setState({...this.state,deathText2RRRR:`Nobody Cared v(v_v)v`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by sadness"})
       clearInterval(deathInterval)
     },1500)
   }

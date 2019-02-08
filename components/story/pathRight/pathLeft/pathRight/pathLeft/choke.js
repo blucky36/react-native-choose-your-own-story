@@ -9,7 +9,7 @@ class Choke extends Component {
   deathRLRL(){
     this.setState({...this.state,deathTextRLRL:`the mugger overpowers you`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by mugger"})
       clearInterval(deathInterval)
     },1500)
   }
@@ -17,7 +17,7 @@ class Choke extends Component {
   death2RLRL(){
     this.setState({...this.state,deathText2RLRL:`The mugger overpowers ${this.state.alias}`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by mugger"})
       clearInterval(deathInterval)
     },1500)
   }

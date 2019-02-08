@@ -16,14 +16,14 @@ class Murder extends Component {
   deathRLL(){
     this.setState({...this.state,deathTextRLL:`${this.state.alias} is beaten to death`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by batons"})
       clearInterval(deathInterval)
     },1500)
   }
   death2RLL(){
     this.setState({...this.state,deathText2RLL:`${this.state.alias} is shot by cops`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by bullet"})
       clearInterval(deathInterval)
     },1500)
   }

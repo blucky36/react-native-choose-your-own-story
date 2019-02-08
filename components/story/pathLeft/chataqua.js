@@ -11,7 +11,7 @@ class Chataqua extends Component{
   death3(){
     this.setState({...this.state,deathText3:`bear doesn't want sandwich and rips your head off`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"you were decapitated by a bear"})
       clearInterval(deathInterval)
     },1500)
   }

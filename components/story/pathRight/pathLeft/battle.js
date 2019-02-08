@@ -16,7 +16,7 @@ class Battle extends Component {
   deathRL(){
     this.setState({...this.state,deathTextRL:"he stabs you in the heart and steals your 20"})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"stabbed in the heart by a mugger"})
       clearInterval(deathInterval)
     },1500)
   }

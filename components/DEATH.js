@@ -4,9 +4,8 @@ import Anime from "./anime.js"
 import User from "./user.js"
 
 class Death extends Component {
-  state = {...this.props.state,user:false,death:"oof"}
+  state = {...this.props.state,user:false}
   async handleDeath(){
-    //send death data to api
     let users = await fetch(`https://cyosdeath.herokuapp.com/players`).then(data=>data.json())
     let specUser = users.filter(user=>this.state.alias === user.alias),oof
     console.log(specUser);
@@ -44,9 +43,7 @@ class Death extends Component {
   }
 
   render(){
-    console.log(this.state);
     if(this.state.user){
-      console.log(this.state);
       return <User state = {this.state}/>
     }
     return (

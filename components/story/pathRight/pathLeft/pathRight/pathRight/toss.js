@@ -9,7 +9,7 @@ class Toss extends Component {
   deathRLRR(){
     this.setState({...this.state,deathTextRLRR:`knife randomly sticks yourself`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by random knife"})
       clearInterval(deathInterval)
     },1500)
   }
@@ -17,7 +17,7 @@ class Toss extends Component {
   death2RLRR(){
     this.setState({...this.state,deathText2RLRR:`${this.state.alias} dies, for no reason.`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by boredom"})
       clearInterval(deathInterval)
     },1500)
   }

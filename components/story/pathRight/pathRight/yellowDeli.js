@@ -10,7 +10,7 @@ class YellowDeli extends Component {
   deathRR(){
     this.setState({...this.state,deathTextrr:`${this.state.alias} is struck by lightning and dies`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"struck by lightning"})
       clearInterval(deathInterval)
     },1500)
   }

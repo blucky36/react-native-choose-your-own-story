@@ -10,7 +10,7 @@ class Poisoned extends Component {
   deathRRR(){
     this.setState({...this.state,deathTextRRR:`${this.state.alias} keels over and dies`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by poison"})
       clearInterval(deathInterval)
     },1500)
   }

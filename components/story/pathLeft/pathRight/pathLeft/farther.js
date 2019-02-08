@@ -16,7 +16,7 @@ class Farther extends Component {
   deathLRL(){
     this.setState({...this.state,deathTextLRL:`Silly ${this.state.alias} you can't outrun 5 bears`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by bear family"})
       clearInterval(deathInterval)
     },1500)
   }

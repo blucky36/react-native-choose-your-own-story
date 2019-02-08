@@ -8,14 +8,14 @@ class Cult extends Component {
   deathRRLR(){
     this.setState({...this.state,deathTextRRLR:`The drink was fine.  but ${this.state.alias} has a stroke`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by stroke"})
       clearInterval(deathInterval)
     },1500)
   }
   death2RRLR(){
     this.setState({...this.state,deathText2RRLR:`${this.state.alias} is sacraficed`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by sacrafice"})
       clearInterval(deathInterval)
     },1500)
   }

@@ -10,7 +10,7 @@ class MurderBear extends Component {
   deathLLL(){
     this.setState({...this.state,deathTextLLL:`${this.state.alias} is mobbed and killed by animal rights activists`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by PETA"})
       clearInterval(deathInterval)
     },1500)
   }

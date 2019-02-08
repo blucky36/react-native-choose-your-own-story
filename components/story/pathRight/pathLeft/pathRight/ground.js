@@ -16,7 +16,7 @@ class Ground extends Component {
   deathRLR(){
     this.setState({...this.state,deathTextRLR:`the knife comes loose and ${this.state.alias} is stabbed in the neck`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by stabbing"})
       clearInterval(deathInterval)
     },1500)
   }

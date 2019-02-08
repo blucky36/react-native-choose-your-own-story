@@ -9,7 +9,7 @@ class Evacuate extends Component {
   deathRRRL(){
     this.setState({...this.state,deathTextRRRL:`${this.state.alias} dies from an aneurysm`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by aneurysm"})
       clearInterval(deathInterval)
     },1500)
   }
@@ -17,7 +17,7 @@ class Evacuate extends Component {
   death2RRRL(){
     this.setState({...this.state,deathText2RRRL:`walks into street while staring at sun and is run over`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by sun"})
       clearInterval(deathInterval)
     },1500)
   }

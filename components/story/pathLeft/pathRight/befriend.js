@@ -16,7 +16,7 @@ class Befriend extends Component {
   deathLR(){
     this.setState({...this.state,deathTextLR:"the bear mauls you to death"})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"mauled to death by bear"})
       clearInterval(deathInterval)
     },1500)
   }

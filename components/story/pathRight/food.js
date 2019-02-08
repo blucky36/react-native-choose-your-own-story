@@ -11,7 +11,7 @@ class Food extends Component{
   death2(){
     this.setState({...this.state,deathText2:"He takes your 20 and stabs you anyway"})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"you were stabbed by a greedy mugger"})
       clearInterval(deathInterval)
     },1500)
   }

@@ -16,7 +16,7 @@ class BackWithBear extends Component {
   deathLRR(){
     this.setState({...this.state,deathTextLRR:"Why on earth would that ever be a good idea?!?"})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"death by stupidity"})
       clearInterval(deathInterval)
     },1500)
   }

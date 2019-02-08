@@ -10,14 +10,14 @@ class BattleBear extends Component {
   deathLL(){
     this.setState({...this.state,deathTextLL:"the bear hates the sandwich and mauls you to death"})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"mauled to death by bear"})
       clearInterval(deathInterval)
     },1500)
   }
   death2LL(){
     this.setState({...this.state,deathText2LL:"the bear looks confused and mauls you to death"})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"also mauled to death by bear"})
       clearInterval(deathInterval)
     },1500)
   }
