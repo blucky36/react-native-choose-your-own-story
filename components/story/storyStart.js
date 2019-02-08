@@ -12,7 +12,8 @@ class StoryStart extends Component{
     output:"And So It Begins",
     deathText1:`${this.props.state.alias} decides to stay on the couch`,
     left1:false,
-    right1:false
+    right1:false,
+    death:""
   }
 
   leftPath(){
@@ -26,7 +27,7 @@ class StoryStart extends Component{
   death1(){
     this.setState({...this.state,deathText1:`${this.state.alias} dies of malnourishment GAME OVER`})
     let deathInterval = setInterval(()=>{
-      this.setState({...this.state,dead:true})
+      this.setState({...this.state,dead:true,death:"malnourishment"})
       clearInterval(deathInterval)
     },1500)
   }
